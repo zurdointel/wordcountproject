@@ -1,0 +1,16 @@
+<h1>The number of words you input are {{ number }}</h1>
+
+<a href="{% url 'homepage'%}"> Go to homepage</a>
+
+<h1>Input Text:</h1>
+
+{{ fulltext }}
+
+<h1> Words sorted from the most repeated to less one <h1>
+
+  {% for word, totalwords in sortedwords %}
+
+  {{ word }} = {{ totalwords }}
+  <br />
+
+  {% endfor %}
